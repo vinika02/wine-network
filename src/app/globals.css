@@ -248,6 +248,14 @@ button {
   transform: translate3d(6px, 0, 0);
 }
 
+.motion-table {
+  scrollbar-width: none;
+}
+
+.motion-table::-webkit-scrollbar {
+  display: none;
+}
+
 .motion-button {
   position: relative;
   overflow: hidden;
