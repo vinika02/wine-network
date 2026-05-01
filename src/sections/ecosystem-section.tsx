@@ -1,0 +1,146 @@
+import Image from "next/image";
+
+import { ecosystemCards } from "@/lib/home-data";
+
+const cardBackgrounds: Record<string, string> = {
+  "The Product": "/images/ecosystem/product.png",
+  "The Platform": "/images/ecosystem/platform.png",
+  "The Promise": "/images/ecosystem/promise.png",
+};
+
+function CardBackground({ src, eager }: { src: string; eager?: boolean }) {
+  return (
+    <>
+      <Image
+        src={src}
+        alt=""
+        fill
+        priority={eager}
+        sizes="(max-width: 1024px) 100vw, 640px"
+        className="motion-card-image object-cover"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_5%,rgba(0,0,0,1)_87%)]" />
+    </>
+  );
+}
+
+function CardContent({
+  iconSrc,
+  iconSize = 32,
+  title,
+  description,
+  titleSize,
+}: {
+  iconSrc: string;
+  iconSize?: number;
+  title: string;
+  description: string;
+  titleSize: "lg" | "md";
+}) {
+  return (
+    <div className="relative z-10 flex h-full w-full flex-col justify-end p-6 sm:p-8">
+      <div className="flex max-w-[359px] flex-col gap-2">
+        <Image
+          src={iconSrc}
+          alt=""
+          width={iconSize}
+          height={iconSize}
+          className="h-8 w-8"
+        />
+        <h3
+          className={
+            titleSize === "lg"
+              ? "font-display text-[22px] font-bold uppercase leading-[1.5] tracking-[-0.04em] text-white sm:text-[24px]"
+              : "font-display text-[20px] font-bold uppercase leading-[1.5] tracking-[-0.04em] text-white sm:text-[22px]"
+          }
+        >
+          {title}
+        </h3>
+        <p className="font-display text-[15px] leading-6 tracking-[-0.04em] text-white/60 lg:text-[18px] lg:leading-[1.5]">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export function EcosystemSection() {
+  const [product, platform, promise] = ecosystemCards;
+
+  return (
+    <section className="section-shell relative isolate overflow-hidden">
+      {/* Figma atmospheric ellipses (54:1292) — soft white-grey wash that bleeds through the dark bg */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-[18%] -right-[14%] h-[1052px] w-[1052px] max-h-[80vw] max-w-[80vw] rounded-full opacity-90"
+        style={{
+          background:
+            "linear-gradient(247deg, rgba(12, 12, 12, 1) 0%, rgba(255, 255, 255, 0.22) 99%)",
+          filter: "blur(220px)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-[20%] -left-[18%] h-[580px] w-[580px] max-h-[60vw] max-w-[60vw] rounded-full opacity-80"
+        style={{
+          background:
+            "linear-gradient(247deg, rgba(12, 12, 12, 1) 0%, rgba(255, 255, 255, 0.18) 99%)",
+          filter: "blur(220px)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-[1442px] px-6 py-20 sm:px-12 lg:px-20 lg:py-[80px]">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-stretch lg:gap-[29px]">
+          <div className="flex flex-col justify-center gap-5 lg:flex-1 lg:gap-6">
+            <p className="font-display text-[34px] font-light uppercase leading-[1.05] tracking-[-0.04em] text-[#616161] sm:text-[44px] lg:text-[56px]">
+              The Revolution in
+            </p>
+            <h2 className="font-display text-[34px] font-bold uppercase leading-[1.05] tracking-[-0.04em] text-white sm:text-[44px] lg:text-[56px]">
+              Aftermeal Marketing.
+            </h2>
+          </div>
+          <div className="flex max-w-[567px] flex-col gap-5 font-display text-[16px] leading-[1.5] tracking-[-0.04em] text-white/60 lg:w-[567px] lg:shrink-0 lg:text-[18px] lg:leading-[1.5]">
+            <p>
+              Most hospitality groups leave their most valuable asset - the guest relationship - at
+              the table. That&rsquo;s why we&rsquo;ve built the world&rsquo;s first Aftermeal
+              Marketing ecosystem to capture it.
+            </p>
+            <p>
+              We help hospitality groups monetize their customer base through a revolutionary,
+              end-to-end private label wine platform.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-10 grid gap-3 lg:mt-[56px] lg:grid-cols-2 lg:items-stretch">
+          <article className="motion-image-card group relative isolate overflow-hidden rounded-[17px] aspect-[635/491]">
+            <CardBackground src={cardBackgrounds[product.title]} eager />
+            <CardContent
+              iconSrc={product.iconSrc}
+              title={product.title}
+              description={product.description}
+              titleSize="lg"
+            />
+          </article>
+
+          <div className="grid gap-3 lg:grid-rows-2">
+            {[platform, promise].map((card) => (
+              <article
+                key={card.title}
+                className="motion-image-card group relative isolate overflow-hidden rounded-[17px] aspect-[635/240] lg:aspect-auto"
+              >
+                <CardBackground src={cardBackgrounds[card.title]} />
+                <CardContent
+                  iconSrc={card.iconSrc}
+                  title={card.title}
+                  description={card.description}
+                  titleSize="md"
+                />
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
