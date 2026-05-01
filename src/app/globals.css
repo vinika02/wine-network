@@ -23,6 +23,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-dm-sans), "Helvetica Neue", Arial, sans-serif;
@@ -63,6 +64,54 @@ button {
 
 .nav-link-motion:hover::after {
   transform: scaleX(1);
+}
+
+.mobile-menu-button {
+  position: relative;
+}
+
+.mobile-menu-button span {
+  position: absolute;
+  left: 8px;
+  height: 1.5px;
+  width: 14px;
+  border-radius: 999px;
+  background: currentColor;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
+}
+
+.mobile-menu-button span:nth-child(1) {
+  transform: translateY(-5px);
+}
+
+.mobile-menu-button span:nth-child(3) {
+  transform: translateY(5px);
+}
+
+.mobile-menu-button[aria-expanded="true"] span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.mobile-menu-button[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button[aria-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+#mobile-navigation {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+#mobile-navigation[data-open="true"] {
+  max-height: 220px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .scroll-progress {

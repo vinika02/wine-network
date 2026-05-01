@@ -19,7 +19,7 @@ function CardBackground({ src, eager }: { src: string; eager?: boolean }) {
         sizes="(max-width: 1024px) 100vw, 640px"
         className="motion-card-image object-cover"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_5%,rgba(0,0,0,1)_87%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.1)_0%,rgba(0,0,0,0.5)_48%,rgba(0,0,0,0.96)_100%)] sm:bg-[linear-gradient(180deg,rgba(0,0,0,0)_5%,rgba(0,0,0,1)_87%)]" />
     </>
   );
 }
@@ -38,25 +38,25 @@ function CardContent({
   titleSize: "lg" | "md";
 }) {
   return (
-    <div className="relative z-10 flex h-full w-full flex-col justify-end p-6 sm:p-8">
-      <div className="flex max-w-[359px] flex-col gap-2">
+    <div className="relative z-10 flex h-full w-full flex-col justify-end p-5 sm:p-8">
+      <div className="flex max-w-[359px] flex-col gap-1.5 sm:gap-2">
         <Image
           src={iconSrc}
           alt=""
           width={iconSize}
           height={iconSize}
-          className="h-8 w-8"
+          className="mb-1 h-7 w-7 sm:mb-0 sm:h-8 sm:w-8"
         />
         <h3
           className={
             titleSize === "lg"
-              ? "font-display text-[22px] font-bold uppercase leading-[1.5] tracking-[-0.04em] text-white sm:text-[24px]"
-              : "font-display text-[20px] font-bold uppercase leading-[1.5] tracking-[-0.04em] text-white sm:text-[22px]"
+              ? "font-display text-[18px] font-bold uppercase leading-tight tracking-[-0.04em] text-white sm:text-[24px] sm:leading-[1.5]"
+              : "font-display text-[17px] font-bold uppercase leading-tight tracking-[-0.04em] text-white sm:text-[22px] sm:leading-[1.5]"
           }
         >
           {title}
         </h3>
-        <p className="font-display text-[15px] leading-6 tracking-[-0.04em] text-white/60 lg:text-[18px] lg:leading-[1.5]">
+        <p className="font-display text-[13px] leading-[1.45] tracking-[-0.04em] text-white/68 sm:text-[15px] sm:leading-6 lg:text-[18px] lg:leading-[1.5]">
           {description}
         </p>
       </div>
@@ -89,7 +89,7 @@ export function EcosystemSection() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-[1442px] px-6 py-20 sm:px-12 lg:px-20 lg:py-[80px]">
+      <div className="relative z-10 mx-auto max-w-[1442px] px-5 py-16 sm:px-12 sm:py-20 lg:px-20 lg:py-[80px]">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-stretch lg:gap-[29px]">
           <div className="flex flex-col justify-center gap-5 lg:flex-1 lg:gap-6">
             <p className="font-display text-[34px] font-light uppercase leading-[1.05] tracking-[-0.04em] text-[#616161] sm:text-[44px] lg:text-[56px]">
@@ -112,8 +112,8 @@ export function EcosystemSection() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-3 lg:mt-[56px] lg:grid-cols-2 lg:items-stretch">
-          <article className="motion-image-card group relative isolate overflow-hidden rounded-[17px] aspect-[635/491]">
+        <div className="mt-9 grid gap-4 sm:gap-3 lg:mt-[56px] lg:grid-cols-2 lg:items-stretch">
+          <article className="motion-image-card group relative isolate min-h-[230px] overflow-hidden rounded-[12px] sm:rounded-[17px] aspect-auto sm:aspect-[635/491]">
             <CardBackground src={cardBackgrounds[product.title]} eager />
             <CardContent
               iconSrc={product.iconSrc}
@@ -123,11 +123,11 @@ export function EcosystemSection() {
             />
           </article>
 
-          <div className="grid gap-3 lg:grid-rows-2">
+          <div className="grid gap-4 sm:gap-3 lg:grid-rows-2">
             {[platform, promise].map((card) => (
               <article
                 key={card.title}
-                className="motion-image-card group relative isolate overflow-hidden rounded-[17px] aspect-[635/240] lg:aspect-auto"
+                className="motion-image-card group relative isolate min-h-[168px] overflow-hidden rounded-[12px] sm:rounded-[17px] aspect-auto sm:aspect-[635/240] lg:aspect-auto"
               >
                 <CardBackground src={cardBackgrounds[card.title]} />
                 <CardContent

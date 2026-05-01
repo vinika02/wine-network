@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -10,13 +13,15 @@ const navLinks = [
 const logoSrc = "/logo/Wine%20Network%201.svg";
 
 export function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 bg-transparent">
-      <div className="pointer-events-auto mx-auto grid max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center px-6 py-5 sm:px-10 lg:px-20">
+      <div className="pointer-events-auto mx-auto grid max-w-[1440px] grid-cols-[auto_1fr] items-center px-5 py-4 sm:px-10 sm:py-5 md:grid-cols-[1fr_auto_1fr] lg:px-20">
         <Link
           href="/"
           prefetch={false}
-          className="relative block h-9 w-[188px] shrink-0 justify-self-start md:h-10 md:w-[220px]"
+          className="relative block h-7 w-[150px] shrink-0 justify-self-start sm:h-9 sm:w-[188px] md:h-10 md:w-[220px]"
           aria-label="Wine Network home"
         >
           <Image
@@ -44,24 +49,55 @@ export function Navbar() {
             </Link>
           ))}
         </nav>
-        <div className="justify-self-end">
+        <div className="flex items-center gap-3 justify-self-end sm:gap-4">
           <a
             href="#"
             aria-label="Cart"
-            className="relative inline-flex transition hover:opacity-90"
+            className="relative inline-flex h-8 w-8 items-center justify-center transition hover:opacity-90 sm:h-9 sm:w-9 md:h-auto md:w-auto"
           >
-            <span className="absolute -right-0.5 -top-0.5 z-10 h-2 w-2 rounded-full bg-white shadow-[0_0_0_2px_#131313]" aria-hidden />
+            <span className="absolute right-0 top-0 z-10 h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_0_2px_#131313] sm:h-2 sm:w-2 md:-right-0.5 md:-top-0.5" aria-hidden />
             <Image
               src="/icon/cart.svg"
               alt=""
               width={38}
               height={38}
-              className="block h-[38px] w-[38px]"
+              className="block h-8 w-8 sm:h-9 sm:w-9 md:h-[38px] md:w-[38px]"
               draggable={false}
               unoptimized
             />
           </a>
+          <button
+            type="button"
+            className="mobile-menu-button inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/18 bg-transparent text-white md:hidden"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setIsMenuOpen((current) => !current)}
+          >
+            <span aria-hidden />
+            <span aria-hidden />
+            <span aria-hidden />
+          </button>
         </div>
+      </div>
+      <div
+        id="mobile-navigation"
+        className="pointer-events-auto mx-5 overflow-hidden rounded-[8px] border border-white/10 bg-[#111]/92 backdrop-blur transition-[max-height,opacity,transform] duration-300 md:hidden"
+        data-open={isMenuOpen ? "true" : "false"}
+      >
+        <nav aria-label="Mobile primary" className="flex flex-col px-4 py-3">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              prefetch={false}
+              className="border-b border-white/8 py-3 font-display text-[12px] font-bold uppercase tracking-[0.12em] text-white/82 transition last:border-b-0 hover:text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   );
