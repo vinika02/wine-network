@@ -8,9 +8,9 @@ import { HeroBottles } from "@/components/hero-bottles";
 export function HeroSection() {
   return (
     <section className="section-shell hero-layout-bg relative overflow-hidden pb-14 pt-20 sm:pb-20 sm:pt-24 lg:flex lg:min-h-[673px] lg:flex-col lg:justify-center lg:pb-24 lg:pt-32">
-      <div className="relative mx-auto flex w-full max-w-[954px] flex-col gap-7 px-5 sm:gap-10 sm:px-8 lg:flex-row lg:items-center lg:justify-start lg:gap-[60px] lg:px-0">
+      <div className="relative mx-auto flex w-full max-w-[1004px] flex-col gap-7 px-5 sm:gap-10 sm:px-8 lg:flex-row lg:items-center lg:justify-start lg:gap-[60px] lg:px-0">
         <div className="hero-bottles-motion flex w-full shrink-0 justify-center lg:w-auto lg:justify-start">
-          <HeroBottles className="max-h-[min(68vw,310px)] w-full max-w-[330px] sm:max-h-[min(78vw,420px)] sm:max-w-[416px] lg:max-h-[479px] lg:w-[416px] lg:max-w-none" />
+          <HeroBottles className="max-w-[320px] sm:max-w-[400px] lg:w-[464px] lg:max-w-none" />
         </div>
 
         <div className="w-full min-w-0 lg:max-w-[480px]">

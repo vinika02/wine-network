@@ -7,13 +7,13 @@ type HeroBottlesProps = {
 export function HeroBottles({ className = "" }: HeroBottlesProps) {
   return (
     <Image
-      src="/images/hero/Container.png"
-      alt="Curated selection of three private-label wines: Lubanzi, Tignanello, and rosé."
+      src="/images/hero/newwinesc.png"
+      alt="Curated selection of three private-label wines."
       width={464}
       height={518}
       priority
-      sizes="(max-width: 1024px) min(92vw, 464px), 400px"
-      className={`h-auto w-full object-contain object-center lg:object-left ${className}`.trim()}
+      sizes="(max-width: 640px) min(86vw, 320px), (max-width: 1024px) 400px, 464px"
+      className={`h-auto w-full object-contain object-center ${className}`.trim()}
     />
   );
 }
