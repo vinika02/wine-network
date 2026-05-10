@@ -3,12 +3,25 @@ import Image from "next/image";
 import { ecosystemCards } from "@/lib/home-data";
 
 const cardBackgrounds: Record<string, string> = {
-  "The Product": "/images/ecosystem/product.png",
-  "The Platform": "/images/ecosystem/platform.png",
-  "The Promise": "/images/ecosystem/promise.png",
+  "The Product": "/images/ecosystem/Group 6.png",
+  "The Platform": "/images/ecosystem/Group 5.png",
+  "The Promise": "/images/ecosystem/Group 4.png",
 };
 
 function CardBackground({ src, eager }: { src: string; eager?: boolean }) {
+  const isProduct = src === cardBackgrounds["The Product"];
+  const isPlatform = src === cardBackgrounds["The Platform"];
+
+  const imageClass = isProduct
+    ? "object-cover object-[48%_44%]"
+    : isPlatform
+      ? "object-contain object-[94%_38%]"
+      : "object-contain object-[96%_82%]";
+
+  const overlayClass = isProduct
+    ? "bg-[linear-gradient(180deg,rgba(0,0,0,0.04)_0%,rgba(0,0,0,0.1)_38%,rgba(0,0,0,0.88)_84%,rgba(0,0,0,1)_100%)]"
+    : "bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.2)_46%,rgba(0,0,0,0.9)_86%,rgba(0,0,0,1)_100%)]";
+
   return (
     <>
       <Image
@@ -17,9 +30,9 @@ function CardBackground({ src, eager }: { src: string; eager?: boolean }) {
         fill
         priority={eager}
         sizes="(max-width: 1024px) 100vw, 640px"
-        className="motion-card-image object-cover"
+        className={`motion-card-image ${imageClass}`}
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.1)_0%,rgba(0,0,0,0.5)_48%,rgba(0,0,0,0.96)_100%)] sm:bg-[linear-gradient(180deg,rgba(0,0,0,0)_5%,rgba(0,0,0,1)_87%)]" />
+      <div className={`absolute inset-0 ${overlayClass}`} />
     </>
   );
 }

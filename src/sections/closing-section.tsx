@@ -1,5 +1,5 @@
-import { ClosingCta } from "@/components/closing-cta";
+import { ClosingCtaV2 } from "@/components/closing-cta-v2";
 
 export function ClosingSection() {
-  return <ClosingCta href="#" />;
+  return <ClosingCtaV2 href="#" />;
 }

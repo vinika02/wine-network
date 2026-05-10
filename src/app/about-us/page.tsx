@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { ClosingCta } from "@/components/closing-cta";
+import { ClosingCtaV2 } from "@/components/closing-cta-v2";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ScrollReveal } from "@/components/scroll-reveal";
@@ -218,7 +218,7 @@ function TransformationHeading() {
 }
 
 function CtaSection() {
-  return <ClosingCta />;
+  return <ClosingCtaV2 />;
 }
 
 function FigureCard({
