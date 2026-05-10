@@ -137,31 +137,72 @@ button {
 [data-reveal] {
   opacity: 0;
   transition:
-    opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
-    filter 900ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 980ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 980ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 980ms cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0ms);
   will-change: opacity, filter, transform;
 }
 
 [data-reveal="lift"] {
-  filter: blur(12px);
-  transform: translate3d(0, 54px, 0) scale(0.992);
+  filter: blur(16px);
+  transform: translate3d(0, 68px, 0) scale(0.986);
 }
 
 [data-reveal="fade"] {
-  filter: blur(8px);
+  filter: blur(12px);
+  transform: translate3d(0, 18px, 0);
 }
 
 [data-reveal="scale"] {
-  filter: blur(12px);
-  transform: translate3d(0, 34px, 0) scale(0.976);
+  filter: blur(14px);
+  transform: translate3d(0, 26px, 0) scale(0.968);
 }
 
 [data-reveal-visible="true"] {
   opacity: 1;
   filter: blur(0);
   transform: translate3d(0, 0, 0) scale(1);
+}
+
+[data-reveal-stagger="true"] > * {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translate3d(0, 26px, 0);
+  transition:
+    opacity 780ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 780ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 780ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal-stagger="true"] > :nth-child(1) {
+  transition-delay: calc(var(--reveal-delay, 0ms) + 40ms);
+}
+
+[data-reveal-stagger="true"] > :nth-child(2) {
+  transition-delay: calc(var(--reveal-delay, 0ms) + 120ms);
+}
+
+[data-reveal-stagger="true"] > :nth-child(3) {
+  transition-delay: calc(var(--reveal-delay, 0ms) + 200ms);
+}
+
+[data-reveal-stagger="true"] > :nth-child(4) {
+  transition-delay: calc(var(--reveal-delay, 0ms) + 280ms);
+}
+
+[data-reveal-stagger="true"] > :nth-child(5) {
+  transition-delay: calc(var(--reveal-delay, 0ms) + 360ms);
+}
+
+[data-reveal-stagger="true"] > :nth-child(6) {
+  transition-delay: calc(var(--reveal-delay, 0ms) + 440ms);
+}
+
+[data-reveal-visible="true"][data-reveal-stagger="true"] > * {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .hero-copy-in {
@@ -499,6 +540,10 @@ button {
     );
 }
 
+.font-noyh {
+  font-family: "Noyh Geometric", var(--font-space-grotesk), "Helvetica Neue", Arial, sans-serif;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -512,7 +557,8 @@ button {
   .motion-table tbody tr,
   .motion-button,
   .motion-button::before,
-  .nav-link-motion::after {
+  .nav-link-motion::after,
+  [data-reveal-stagger="true"] > * {
     transition: none;
   }
 

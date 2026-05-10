@@ -12,6 +12,7 @@ import {
 type ScrollRevealProps = {
   children: ReactNode;
   delay?: number;
+  stagger?: boolean;
   variant?: "lift" | "fade" | "scale";
 } & HTMLAttributes<HTMLDivElement>;
 
@@ -19,6 +20,7 @@ export function ScrollReveal({
   children,
   className = "",
   delay = 0,
+  stagger = false,
   style,
   variant = "lift",
   ...props
@@ -41,8 +43,8 @@ export function ScrollReveal({
         }
       },
       {
-        rootMargin: "0px 0px -14% 0px",
-        threshold: 0.16,
+        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.12,
       },
     );
 
@@ -56,6 +58,7 @@ export function ScrollReveal({
       ref={ref}
       className={className}
       data-reveal={variant}
+      data-reveal-stagger={stagger ? "true" : "false"}
       data-reveal-visible={isVisible ? "true" : "false"}
       {...props}
       style={{ "--reveal-delay": `${delay}ms`, ...style } as CSSProperties}
