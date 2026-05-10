@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
+  { label: "ABOUT DR.MORAN", href: "/about-dr-moran" },
   { label: "Contact Us", href: "#contact" },
 ];
 
@@ -14,6 +16,7 @@ const logoSrc = "/logo/Wine%20Network%201.svg";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 bg-transparent">
@@ -43,7 +46,9 @@ export function Navbar() {
               key={link.label}
               href={link.href}
               prefetch={false}
-              className="nav-link-motion transition hover:text-white"
+              className={`nav-link-motion transition hover:text-white ${
+                pathname === link.href ? "font-bold text-white" : ""
+              }`}
             >
               {link.label}
             </Link>
@@ -91,7 +96,9 @@ export function Navbar() {
               key={link.label}
               href={link.href}
               prefetch={false}
-              className="border-b border-white/8 py-3 font-display text-[12px] font-bold uppercase tracking-[0.12em] text-white/82 transition last:border-b-0 hover:text-white"
+              className={`border-b border-white/8 py-3 font-display text-[12px] font-bold uppercase tracking-[0.12em] transition last:border-b-0 hover:text-white ${
+                pathname === link.href ? "text-white" : "text-white/82"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               {link.label}
