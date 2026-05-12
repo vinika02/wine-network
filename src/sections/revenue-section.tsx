@@ -2,7 +2,7 @@ import { RevenueTable } from "@/components/revenue-table";
 
 export function RevenueSection() {
   return (
-    <section className="relative isolate overflow-hidden">
+    <section id="lost-revenue" className="relative isolate overflow-hidden">
       {/* Figma fill_1SQLOZ — Linear gradient at 100% opacity (the dominant fill) */}
       <div
         className="absolute inset-0 -z-20"

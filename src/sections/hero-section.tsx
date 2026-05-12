@@ -38,7 +38,7 @@ export function HeroSection() {
             icons.
           </p>
 
-          <Button href="#" className="hero-copy-in hero-copy-in-6 motion-button mt-5 min-w-[122px] px-5 py-2.5 text-[11px] sm:mt-6 sm:min-w-[148px] sm:px-6 sm:py-3 sm:text-[14px] lg:mt-7">
+          <Button href="#lost-revenue" className="hero-copy-in hero-copy-in-6 motion-button mt-5 min-w-[122px] px-5 py-2.5 text-[11px] sm:mt-6 sm:min-w-[148px] sm:px-6 sm:py-3 sm:text-[14px] lg:mt-7">
             Find Out More
           </Button>
         </div>

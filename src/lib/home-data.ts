@@ -36,19 +36,14 @@ export const advantageCards = [
 ];
 
 export const revenueColumns = [
-  "House Prosecco / Sparkling",
-  "House Prosecco / Sparkling",
-  "House Prosecco / Sparkling",
+  "Sparkling",
+  "Red",
+  "White",
 ];
 
 export const revenueRows = [
-  { metric: "Current Price per Glass", values: ["$15", "$17", "$20"] },
-  { metric: "Elevated price per Glass", values: ["$18", "$2", "$28"] },
-  { metric: "Margin Increase / Glass", values: ["+$3.00", "+$5.00", "+$8.00"] },
-  { metric: "Current Price per Bottle", values: ["+$75", "+$65", "$75"] },
-  { metric: "Elevated price per Bottle", values: ["+$100", "+$90", "$125"] },
-  { metric: "Margin Increase / Bottle", values: ["+$25", "+$35", "+$50"] },
-  { metric: "Lost Revenue Opportunity", values: ["$150,000", "$210,000", "$300,000"] },
+  
+  { metric: "Lost Revenue Opportunity", values: ["$75,000", "$150,000", "$100,000"] },
 ];
 
 export const ecosystemCards = [
