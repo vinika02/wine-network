@@ -61,14 +61,14 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 max-w-[1442px] sm:mt-12 lg:mt-10">
+      <div className="mt-6 overflow-hidden sm:mt-8 lg:mt-6">
         <Image
           src="/logo/wine-network-watermark.png"
           alt=""
           width={2504}
           height={457}
           priority={false}
-          className="pointer-events-none block w-full select-none opacity-20"
+          className="pointer-events-none block w-[104%] min-w-[920px] max-w-none -translate-x-[0.6%] translate-y-[18%] select-none opacity-[0.16] sm:min-w-[1320px] lg:min-w-0"
         />
       </div>
     </footer>

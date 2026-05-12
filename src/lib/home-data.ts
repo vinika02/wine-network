@@ -43,7 +43,7 @@ export const revenueColumns = [
 
 export const revenueRows = [
   { metric: "Current Price per Glass", values: ["$15", "$17", "$20"] },
-  { metric: "Elevated price per Glass", values: ["$18", "$22", "$28"] },
+  { metric: "Elevated price per Glass", values: ["$18", "$2", "$28"] },
   { metric: "Margin Increase / Glass", values: ["+$3.00", "+$5.00", "+$8.00"] },
   { metric: "Current Price per Bottle", values: ["+$75", "+$65", "$75"] },
   { metric: "Elevated price per Bottle", values: ["+$100", "+$90", "$125"] },

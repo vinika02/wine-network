@@ -39,7 +39,7 @@ export function Navbar() {
         </Link>
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-12 justify-self-center text-[11px] font-semibold uppercase tracking-[0.08em] text-white/88 md:flex"
+          className="hidden items-center gap-12 justify-self-center text-[11px] font-semibold uppercase tracking-[0.08em] text-white/62 md:flex"
         >
           {navLinks.map((link) => (
             <Link
@@ -47,7 +47,7 @@ export function Navbar() {
               href={link.href}
               prefetch={false}
               className={`nav-link-motion transition hover:text-white ${
-                pathname === link.href ? "font-bold text-white" : ""
+                pathname === link.href ? "text-[#FFF]" : ""
               }`}
             >
               {link.label}
