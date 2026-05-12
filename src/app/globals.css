@@ -1,15 +1,152 @@
 @import "tailwindcss";
 
+/* @font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-thinitalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+} */
+
+/* @font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-extralight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-extlita.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+} */
+
+/* @font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-lightitalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+} */
+
+/* @font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-semilight.woff2") format("woff2");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-semilightitalic.woff2") format("woff2");
+  font-weight: 350;
+  font-style: italic;
+  font-display: swap;
+} */
+
+
+/* 
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-mediumitalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-bolditalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-heavyitalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-blackitalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+} */
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/NoyhGeometricLight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/NoyhGeometricRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/NoyhGeometricMedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/NoyhGeometricBoldRegular.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --color-background: #0a0a0a;
   --color-foreground: #ffffff;
+  --font-noyh: "Noyh Geometric";
 }
 
 @theme inline {
   --color-background: var(--color-background);
   --color-foreground: var(--color-foreground);
   --font-sans: var(--font-dm-sans), "Helvetica Neue", Arial, sans-serif;
-  --font-display: var(--font-space-grotesk), "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Noyh Geometric", var(--font-space-grotesk), "Helvetica Neue", Arial, sans-serif;
 }
 
 * {
@@ -26,7 +163,7 @@ body {
   overflow-x: hidden;
   background: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-dm-sans), "Helvetica Neue", Arial, sans-serif;
+  font-family: "Noyh Geometric", var(--font-dm-sans), "Helvetica Neue", Arial, sans-serif !important;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
