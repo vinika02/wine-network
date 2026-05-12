@@ -19,7 +19,7 @@ export function RevenueTable() {
                   {column.split(" / ").map((part, i) => (
                     <span key={i} className="block">
                       {part}
-                      {i === 0 ? " /" : ""}
+                      {i === 0 ? " " : ""}
                     </span>
                   ))}
                 </th>
