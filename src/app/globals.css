@@ -184,6 +184,103 @@ button {
   font: inherit;
 }
 
+/* Typography calibration: the exported design uses fixed Tailwind sizes, so scale them here globally. */
+.text-xs { font-size: 14px; }
+.text-sm { font-size: 16px; }
+.text-base { font-size: 18px; }
+.text-lg { font-size: 20px; }
+.text-2xl { font-size: 26px; }
+.text-4xl { font-size: 40px; }
+.text-\[10px\] { font-size: 12px; }
+.text-\[11px\] { font-size: 12px; }
+.text-\[12px\] { font-size: 14px; }
+.text-\[13px\] { font-size: 15px; }
+.text-\[14px\] { font-size: 16px; }
+.text-\[15px\] { font-size: 17px; }
+.text-\[16px\] { font-size: 18px; }
+.text-\[17px\] { font-size: 19px; }
+.text-\[18px\] { font-size: 20px; }
+.text-\[20px\] { font-size: 22px; }
+.text-\[22px\] { font-size: 24px; }
+.text-\[24px\] { font-size: 26px; }
+.text-\[26px\] { font-size: 29px; }
+.text-\[28px\] { font-size: 31px; }
+.text-\[31px\] { font-size: 34px; }
+.text-\[32px\] { font-size: 35px; }
+.text-\[34px\] { font-size: 37px; }
+.text-\[36px\] { font-size: 40px; }
+.text-\[38px\] { font-size: 42px; }
+.text-\[39px\] { font-size: 43px; }
+.text-\[40px\] { font-size: 44px; }
+.text-\[42px\] { font-size: 46px; }
+.text-\[44px\] { font-size: 48px; }
+.text-\[48px\] { font-size: 52px; }
+.text-\[54px\] { font-size: 58px; }
+.text-\[56px\] { font-size: 60px; }
+.text-\[58px\] { font-size: 62px; }
+.text-\[62px\] { font-size: 66px; }
+.text-\[72px\] { font-size: 76px; }
+.text-\[84px\] { font-size: 88px; }
+.text-\[clamp\(2\.35rem\,12\.4vw\,3\.2rem\)\] {
+  font-size: clamp(2.55rem, 13vw, 3.55rem);
+}
+
+@media (min-width: 640px) {
+  .sm\:text-lg { font-size: 20px; }
+  .sm\:text-5xl { font-size: 52px; }
+  .sm\:text-\[11px\] { font-size: 13px; }
+  .sm\:text-\[12px\] { font-size: 14px; }
+  .sm\:text-\[13px\] { font-size: 15px; }
+  .sm\:text-\[14px\] { font-size: 16px; }
+  .sm\:text-\[15px\] { font-size: 17px; }
+  .sm\:text-\[16px\] { font-size: 18px; }
+  .sm\:text-\[18px\] { font-size: 20px; }
+  .sm\:text-\[20px\] { font-size: 22px; }
+  .sm\:text-\[22px\] { font-size: 24px; }
+  .sm\:text-\[24px\] { font-size: 26px; }
+  .sm\:text-\[28px\] { font-size: 31px; }
+  .sm\:text-\[32px\] { font-size: 35px; }
+  .sm\:text-\[34px\] { font-size: 37px; }
+  .sm\:text-\[38px\] { font-size: 42px; }
+  .sm\:text-\[40px\] { font-size: 44px; }
+  .sm\:text-\[42px\] { font-size: 46px; }
+  .sm\:text-\[44px\] { font-size: 48px; }
+  .sm\:text-\[48px\] { font-size: 52px; }
+  .sm\:text-\[56px\] { font-size: 60px; }
+  .sm\:text-\[62px\] { font-size: 66px; }
+}
+
+@media (min-width: 768px) {
+  .md\:text-\[12px\] { font-size: 14px; }
+  .md\:text-\[13px\] { font-size: 15px; }
+  .md\:text-\[14px\] { font-size: 16px; }
+  .md\:text-\[16px\] { font-size: 18px; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-\[10px\] { font-size: 12px; }
+  .lg\:text-\[12px\] { font-size: 14px; }
+  .lg\:text-\[13px\] { font-size: 15px; }
+  .lg\:text-\[14px\] { font-size: 16px; }
+  .lg\:text-\[15px\] { font-size: 17px; }
+  .lg\:text-\[16px\] { font-size: 18px; }
+  .lg\:text-\[18px\] { font-size: 20px; }
+  .lg\:text-\[24px\] { font-size: 26px; }
+  .lg\:text-\[31px\] { font-size: 34px; }
+  .lg\:text-\[38px\] { font-size: 42px; }
+  .lg\:text-\[39px\] { font-size: 43px; }
+  .lg\:text-\[44px\] { font-size: 48px; }
+  .lg\:text-\[48px\] { font-size: 52px; }
+  .lg\:text-\[54px\] { font-size: 58px; }
+  .lg\:text-\[56px\] { font-size: 60px; }
+  .lg\:text-\[58px\] { font-size: 62px; }
+  .lg\:text-\[72px\] { font-size: 76px; }
+}
+
+@media (min-width: 1280px) {
+  .xl\:text-\[84px\] { font-size: 88px; }
+}
+
 .nav-link-motion {
   position: relative;
 }
@@ -606,7 +703,6 @@ button {
 .hero-layout-bg {
   background-color: var(--color-background);
   isolation: isolate;
-  /* Gradient stacks above URL — keep overlay light so hero-background.svg texture stays visible */
   background-image: none;
 }
 
