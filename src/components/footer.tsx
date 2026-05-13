@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer id="contact" className="relative isolate overflow-hidden bg-black lg:min-h-[420px]">
       <Image
-        src="/layout/footer.png"
+        src="/layout/footer.svg"
         alt=""
         width={1440}
         height={420}
