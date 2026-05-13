@@ -18,9 +18,9 @@ export default function HomePage() {
         <ScrollReveal>
           <AdvantageSection />
         </ScrollReveal>
-        <ScrollReveal delay={80}>
+        {/* <ScrollReveal delay={80}>
           <RevenueSection />
-        </ScrollReveal>
+        </ScrollReveal> */}
         <ScrollReveal delay={80} variant="scale">
           <EcosystemSection />
         </ScrollReveal>
