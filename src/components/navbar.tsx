@@ -39,20 +39,28 @@ export function Navbar() {
         </Link>
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-12 justify-self-center text-[11px] font-semibold uppercase tracking-[0.08em] text-white/62 md:flex"
+          className="hidden items-center gap-14 justify-self-center text-[13px] font-semibold uppercase tracking-[0.08em] md:flex"
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              prefetch={false}
-              className={`nav-link-motion transition hover:text-white ${
-                pathname === link.href ? "text-[#FFF]" : ""
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive =
+              link.href !== "#" &&
+              link.href !== "#contact" &&
+              (pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href)));
+
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                prefetch={false}
+                className={`nav-link-motion transition hover:text-white ${
+                  isActive ? "text-white" : "text-white/62"
+                }`}
+                style={{ color: isActive ? "#FFF" : "rgba(255,255,255,0.62)" }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
         <div className="flex items-center gap-3 justify-self-end sm:gap-4">
           <a
@@ -91,19 +99,27 @@ export function Navbar() {
         data-open={isMenuOpen ? "true" : "false"}
       >
         <nav aria-label="Mobile primary" className="flex flex-col px-4 py-3">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              prefetch={false}
-              className={`border-b border-white/8 py-3 font-display text-[12px] font-bold uppercase tracking-[0.12em] transition last:border-b-0 hover:text-white ${
-                pathname === link.href ? "text-white" : "text-white/82"
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive =
+              link.href !== "#" &&
+              link.href !== "#contact" &&
+              (pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href)));
+
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                prefetch={false}
+                className={`border-b border-white/8 py-3 font-display text-[12px] font-bold uppercase tracking-[0.12em] transition last:border-b-0 hover:text-white ${
+                  isActive ? "text-white" : "text-white/82"
+                }`}
+                style={{ color: isActive ? "#FFF" : "rgba(255,255,255,0.82)" }}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </header>
