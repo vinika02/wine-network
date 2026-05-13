@@ -40,7 +40,7 @@ export function Footer() {
               href="mailto:keith@winenetwork.sg"
               className="font-display text-[16px] leading-[1.55] tracking-tight text-white transition hover:text-white/70"
             >
-              keith@winenetwork.sg
+              keith@axpara.com
             </a>
           </FooterColumn>
 
