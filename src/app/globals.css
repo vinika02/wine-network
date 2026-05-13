@@ -1,12 +1,6 @@
 @import "tailwindcss";
 
-/* @font-face {
-  font-family: "Noyh Geometric";
-  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-thin.woff2") format("woff2");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
+/* 
 
 @font-face {
   font-family: "Noyh Geometric";
@@ -16,14 +10,7 @@
   font-display: swap;
 } */
 
-/* @font-face {
-  font-family: "Noyh Geometric";
-  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-extralight.woff2") format("woff2");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* 
 @font-face {
   font-family: "Noyh Geometric";
   src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-extlita.woff2") format("woff2");
@@ -40,13 +27,7 @@
   font-display: swap;
 } */
 
-/* @font-face {
-  font-family: "Noyh Geometric";
-  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-semilight.woff2") format("woff2");
-  font-weight: 350;
-  font-style: normal;
-  font-display: swap;
-}
+/*
 
 @font-face {
   font-family: "Noyh Geometric";
@@ -91,14 +72,6 @@
 }
 @font-face {
   font-family: "Noyh Geometric";
-  src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-black.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Noyh Geometric";
   src: url("/fonts/noyhgeometric/Fontspring-noyhgeometric-blackitalic.woff2") format("woff2");
   font-weight: 900;
   font-style: italic;
@@ -107,12 +80,34 @@
 
 @font-face {
   font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/NoyhGeometricThin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/NoyhGeometricExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noyh Geometric";
   src: url("/fonts/noyhgeometric/NoyhGeometricLight.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
-
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/NoyhGeometricSemiLight.woff2") format("woff2");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: "Noyh Geometric";
   src: url("/fonts/noyhgeometric/NoyhGeometricRegular.woff2") format("woff2");
@@ -131,8 +126,16 @@
 
 @font-face {
   font-family: "Noyh Geometric";
-  src: url("/fonts/noyhgeometric/NoyhGeometricBoldRegular.woff2") format("woff2");
+  src: url("/fonts/noyhgeometric/NoyhGeometricBold.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noyh Geometric";
+  src: url("/fonts/noyhgeometric/NoyhGeometricBlack.woff2") format("woff2");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }

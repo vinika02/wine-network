@@ -21,7 +21,7 @@ export function AdvantageSection() {
   ];
 
   return (
-    <section className="section-shell section-pattern py-20 lg:py-28">
+    <section className="section-shell section-pattern">
       <div className="mx-auto max-w-[1208px] px-6">
         {/* Heading + glow divider */}
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
@@ -34,7 +34,7 @@ export function AdvantageSection() {
             className="h-[96px] w-px lg:h-[113px]"
           />
           <h2 className="mt-6 font-display text-[36px] font-light uppercase tracking-[0.107em] leading-[1.1] text-white/60 sm:text-[44px] lg:text-[56px] lg:leading-[62px]">
-            <span className="block">The Unlabelled</span>
+            <span className="block font-extralight">The Unlabelled</span>
             <span className="block font-bold text-white">Advantage</span>
           </h2>
         </div>
@@ -55,7 +55,7 @@ export function AdvantageSection() {
                 a strategic pivot that replaces third-party brands with high-quality, exclusive
                 private labels, reclaiming both your profit and your brand narrative.
               </span>
-              <span className="hidden lg:block">
+              <span className="hidden lg:block hidden lg:block text-white font-extralight">
                 {descriptionLines.map((line) => (
                   <span key={line} className="block whitespace-nowrap">
                     {line}

@@ -84,7 +84,7 @@ function FooterColumn({
 }) {
   return (
     <div className="flex flex-col gap-3">
-      <p className="font-display text-[11px] font-medium uppercase leading-[1.4] tracking-[0.08em] text-white/60 lg:text-[10px]">
+      <p className="font-display text-[16px] font-medium uppercase leading-[1.4] tracking-[0.08em] text-white/60 mb-4">
         {label}
       </p>
       <div className="flex flex-col gap-0.5">{children}</div>

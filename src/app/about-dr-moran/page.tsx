@@ -98,7 +98,7 @@ function HeroSection() {
             Australia, where he completed a PhD in viticulture and oenology at the University of
             Adelaide.
           </p>
-          <div className="mt-6 hidden max-w-[510px] font-display text-[15px] leading-[1.48] tracking-[-0.04em] text-white/70 lg:block">
+          <div className="mt-6 font-light hidden max-w-[510px] font-display text-[18px] leading-[1.48] tracking-[-0.04em] text-white/70 lg:block">
             {heroCopyLines.map((line) => (
               <span key={line} className="block whitespace-nowrap">
                 {line}
@@ -146,7 +146,7 @@ function KeyPhilosophySection() {
         </blockquote>
         <div className="mt-7 hidden max-w-[580px] text-center font-display text-[31px] font-medium leading-[1.25] tracking-[-0.04em] text-white lg:block">
           {philosophyQuoteLines.map((line) => (
-            <span key={line} className="block whitespace-nowrap">
+            <span key={line} className="block whitespace-nowrap font-light">
               {line}
             </span>
           ))}
@@ -160,7 +160,7 @@ function KeyPhilosophySection() {
           the complexity, texture and natural antioxidant protection that comes from lees contact
           is irreplaceable.
         </p>
-        <div className="mt-6 hidden max-w-[700px] text-center font-display text-[14px] leading-[1.5] tracking-[-0.04em] text-white/62 lg:block">
+       <div className="mt-6 font-light hidden max-w-[700px] text-center font-display text-[20px] leading-[1.5] tracking-[-0.04em] text-white/62 lg:block">
           {philosophyCopyLines.map((line) => (
             <span key={line} className="block whitespace-nowrap">
               {line}
@@ -194,39 +194,41 @@ function TerroirSection() {
             Adelaide Hills
           </h2>
 
-          <div className="mt-6 space-y-5 font-display text-[12px] leading-[1.48] tracking-[-0.04em] text-white/68 sm:text-[13px] lg:max-w-[470px] lg:text-[14px]">
-            <div className="lg:hidden">
-              <p>
-                The chardonnay and pinot noir are both sourced from the ex-Lenswood Research
-                Station - a vineyard planted in randomised experimental blocks with three clones
-                across three different rootstocks, originally designed for scientific trials.
-              </p>
-            </div>
-            <div className="hidden lg:block">
-              {terroirParagraphOneLines.map((line) => (
-                <span key={line} className="block whitespace-nowrap">
-                  {line}
-                </span>
-              ))}
-            </div>
-
-            <div className="lg:hidden">
-              <p>
-                The vineyard maintains excellent canopy balance with minimal irrigation and
-                permanent green cover - conditions that produce naturally well-balanced fruit
-                without requiring heavy intervention. The chardonnay averages 15 months on lees
-                before release; the pinot noir between 14 and 24 months, depending on the
-                vintage.
-              </p>
-            </div>
-            <div className="hidden lg:block">
-              {terroirParagraphTwoLines.map((line) => (
-                <span key={line} className="block whitespace-nowrap">
-                  {line}
-                </span>
-              ))}
-            </div>
+         <div className="mt-6 font-light space-y-5 font-display text-[18px] leading-[1.48] tracking-[-0.04em] text-white/68 lg:max-w-[470px]">
+          <div className="lg:hidden">
+            <p>
+              The chardonnay and pinot noir are both sourced from the ex-Lenswood Research
+              Station - a vineyard planted in randomised experimental blocks with three clones
+              across three different rootstocks, originally designed for scientific trials.
+            </p>
           </div>
+
+          <div className="hidden lg:block">
+            {terroirParagraphOneLines.map((line) => (
+              <span key={line} className="block whitespace-nowrap">
+                {line}
+              </span>
+            ))}
+          </div>
+
+          <div className="lg:hidden">
+            <p>
+              The vineyard maintains excellent canopy balance with minimal irrigation and
+              permanent green cover - conditions that produce naturally well-balanced fruit
+              without requiring heavy intervention. The chardonnay averages 15 months on lees
+              before release; the pinot noir between 14 and 24 months, depending on the
+              vintage.
+            </p>
+          </div>
+
+          <div className="hidden lg:block">
+            {terroirParagraphTwoLines.map((line) => (
+              <span key={line} className="block whitespace-nowrap">
+                {line}
+              </span>
+            ))}
+          </div>
+        </div>
         </div>
 
         <OffsetImage

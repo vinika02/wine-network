@@ -5,6 +5,7 @@ import { HeroBottles } from "@/components/hero-bottles";
  * Figma: Hero artboard 1440×673, content frame 954×447, row gap 60px, items center.
  * Headline = Black 80/-2.5%, eyebrow = 12/40%, body = 18, button = Medium 14/-4%.
  */
+
 export function HeroSection() {
   return (
     <section className="section-shell hero-layout-bg relative overflow-hidden pb-14 pt-20 sm:pb-20 sm:pt-24 lg:flex lg:min-h-[673px] lg:flex-col lg:justify-center lg:pb-24 lg:pt-32">
@@ -14,7 +15,7 @@ export function HeroSection() {
         </div>
 
         <div className="w-full min-w-0 lg:max-w-[480px]">
-          <p className="hero-copy-in text-[10px] font-black uppercase tracking-[0.32em] text-white/80 sm:text-[11px] lg:text-[12px]">
+          <p className="hero-copy-in text-[10px] font-extralight uppercase tracking-[0.32em] text-white/80 sm:text-[11px] lg:text-[12px]">
             Since 2000
           </p>
 
@@ -33,12 +34,15 @@ export function HeroSection() {
             </div>
           </div>
 
-          <p className="hero-copy-in hero-copy-in-5 mt-5 max-w-[330px] text-[13px] leading-6 text-white/72 sm:mt-6 sm:max-w-[380px] sm:text-[15px] sm:leading-relaxed lg:mt-5 lg:text-[16px] lg:leading-6">
+          <p className="hero-copy-in hero-copy-in-5 mt-5 max-w-[330px] text-[18px] font-light leading-6 text-white sm:mt-6 sm:max-w-[380px] lg:mt-5">
             We source the world&apos;s finest unlabelled wines that consistently outperform the
             icons.
           </p>
 
-          <Button href="#lost-revenue" className="hero-copy-in hero-copy-in-6 motion-button mt-5 min-w-[122px] px-5 py-2.5 text-[11px] sm:mt-6 sm:min-w-[148px] sm:px-6 sm:py-3 sm:text-[14px] lg:mt-7">
+         <Button
+            href="#lost-revenue"
+            className="hero-copy-in hero-copy-in-6 motion-button mt-5 min-w-[122px] bg-[#7C7C7C] bg-none px-5 py-2.5 text-[14px] sm:mt-6 sm:min-w-[148px] sm:px-6 sm:py-3 lg:mt-7"
+          >
             Find Out More
           </Button>
         </div>

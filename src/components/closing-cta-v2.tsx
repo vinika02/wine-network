@@ -34,7 +34,7 @@ export function ClosingCtaV2({ href = "#contact" }: ClosingCtaV2Props) {
               textShadow: "0 2px 24px rgba(0,0,0,0.45)",
             }}
           >
-            <p className="font-display text-[20px] font-light tracking-[-0.04em] text-[#616161] sm:text-[28px] lg:text-[39px]">
+            <p className="font-display text-[20px] font-normal tracking-[-0.04em] text-[#616161] sm:text-[28px] lg:text-[56px]">
               The Revolution in
             </p>
             <h2 className="mt-2 whitespace-nowrap font-display text-[22px] font-bold tracking-[-0.04em] text-white sm:text-[32px] lg:text-[56px]">
@@ -51,7 +51,7 @@ export function ClosingCtaV2({ href = "#contact" }: ClosingCtaV2Props) {
               border: "2px solid transparent",
             }}
           >
-            <span>Speak With Us</span>
+            <span className="text-[14px] font-light">Speak With Us</span>
             <Image
               src="/icon/closing-arrow.svg"
               alt=""

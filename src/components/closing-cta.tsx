@@ -44,7 +44,7 @@ export function ClosingCta({ href = "#contact" }: ClosingCtaProps) {
               border: "3px solid transparent",
             }}
           >
-            <span>Speak With Us</span>
+            <span className="text-[14px] font-light">Speak With Us</span>
             <Image
               src="/icon/closing-arrow.svg"
               alt=""
