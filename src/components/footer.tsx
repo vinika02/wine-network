@@ -4,7 +4,7 @@ import { footerLinks } from "@/lib/home-data";
 
 export function Footer() {
   return (
-    <footer id="contact" className="relative isolate overflow-hidden bg-black lg:min-h-[420px]">
+    <footer id="contact" className="relative isolate overflow-hidden bg-black lg:min-h-[480px]">
       <Image
         src="/layout/footer.svg"
         alt=""
@@ -15,7 +15,7 @@ export function Footer() {
         className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 block w-full max-w-none select-none"
       />
 
-      <div className="relative z-10 mx-auto max-w-[1442px] px-6 pt-12 pb-24 sm:px-10 sm:pt-14 sm:pb-28 lg:px-[56px] lg:pt-[72px] lg:pb-[156px]">
+      <div className="relative z-10 mx-auto max-w-[1442px] px-6 pt-12 pb-28 sm:px-10 sm:pt-14 sm:pb-32 lg:px-[56px] lg:pt-[72px] lg:pb-[220px]">
         <div className="grid gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[220px_220px_300px_auto] lg:items-start lg:gap-[42px]">
           <FooterColumn label="Quick Links">
             {footerLinks.map((link) => (
