@@ -139,8 +139,8 @@ function WorldSection() {
 
 function SentosaSection() {
   return (
-   <section className="overflow-visible bg-[#151515] px-6 py-20 text-center sm:px-10 lg:h-[819px] lg:px-20 lg:py-20">
-    <div className="mx-auto flex max-w-[1282px] flex-col items-center gap-14">
+   <section className="overflow-visible bg-[#151515] px-6 py-16 text-center sm:px-10 lg:px-20 lg:py-16">
+    <div className="mx-auto flex max-w-[1282px] flex-col items-center gap-10 lg:gap-12">
       <SentosaHeading />
 
       <Image
@@ -153,14 +153,14 @@ function SentosaSection() {
         unoptimized
       />
 
-      <p className="mx-auto max-w-[928px] font-display text-[22px] leading-[1.45] tracking-[-0.04em] text-white/60">
-        In 2022, we took our expertise to the shores of Sentosa with the launch of Suburbia, a
-        full-scale, wine-themed culinary experience. Suburbia was a masterclass in atmospheric
-        dining, serving as a vibrant hub and event space.
-        <br />
-        <br />
-        The closure of Suburbia wasn&apos;t an end, but a catalyst for evolution.
-      </p>
+      <div className="mx-auto flex max-w-[928px] flex-col gap-7 font-display text-[22px] leading-[1.45] tracking-[-0.04em] text-white/60">
+        <p>
+          In 2022, we took our expertise to the shores of Sentosa with the launch of Suburbia, a
+          full-scale, wine-themed culinary experience. Suburbia was a masterclass in atmospheric
+          dining, serving as a vibrant hub and event space.
+        </p>
+        <p>The closure of Suburbia wasn&apos;t an end, but a catalyst for evolution.</p>
+      </div>
     </div>
   </section>
   );
@@ -179,7 +179,7 @@ function SentosaHeading() {
 
 function TransformationSection() {
   return (
-    <section className="mt-10 bg-[#151515] px-6 py-20 sm:px-10 lg:h-[472px] lg:px-20 lg:py-20">
+    <section className="bg-[#151515] px-6 py-16 sm:px-10 lg:px-20 lg:py-16">
       <div className="mx-auto max-w-[1282px]">
         <div className="grid gap-8 lg:h-[80px] lg:grid-cols-[613px_613px] lg:items-start lg:justify-between lg:gap-0">
           <TransformationHeading />
@@ -189,11 +189,11 @@ function TransformationSection() {
             leadership, Wine Network has pivoted to empowering host restaurants through:
           </p>
         </div>
-        <div className="mt-[56px] grid gap-3 lg:grid-cols-2">
+        <div className="mt-10 grid gap-3 lg:grid-cols-2">
           {transformationCards.map((card) => (
             <article
               key={card.title}
-              className="flex min-h-[176px] border border-white/10 bg-transparent px-6 py-8 sm:px-8 lg:h-[176px] lg:px-8 lg:py-8"
+              className="flex border border-white/10 bg-transparent px-6 py-7 sm:px-8 lg:min-h-[176px] lg:px-8 lg:py-7"
             >
               <div className="flex w-full flex-col gap-3">
               <Image src={card.iconSrc} alt="" width={32} height={32} className="h-7 w-7" />
