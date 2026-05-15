@@ -121,6 +121,10 @@ function HeroSection() {
 function KeyPhilosophySection() {
   return (
     <section className="px-6 py-20 sm:px-10 lg:px-[78px] lg:py-[110px]">
+      <div className="pointer-events-none absolute top-2/3 right-[-400px]
+         z-0 h-[420px] w-[520px]
+         -translate-y-1/2 rounded-full
+         bg-white/20 blur-[220px]"></div>
       <div className="mx-auto flex max-w-[1102px] flex-col items-center">
         <div className="text-center">
           <p className="font-display text-[26px] font-light uppercase leading-[0.95] tracking-[-0.04em] text-[#747474] sm:text-[34px] lg:text-[44px]">
@@ -175,6 +179,10 @@ function KeyPhilosophySection() {
 function TerroirSection() {
   return (
     <section className="relative isolate overflow-hidden px-6 py-20 sm:px-10 lg:px-[78px] lg:py-[112px]">
+      <div className="pointer-events-none absolute top-2/3 left-[-400px]
+         z-0 h-[420px] w-[520px]
+         -translate-y-1/2 rounded-full
+         bg-white/20 blur-[220px]"></div>
       <PatternBackground opacity="opacity-[0.03]" />
       <Image
         src={moranImages.heroBackground}

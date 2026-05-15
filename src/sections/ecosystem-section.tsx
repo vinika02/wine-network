@@ -83,15 +83,16 @@ export function EcosystemSection() {
   return (
     <section className="section-shell relative isolate overflow-hidden">
       {/* Figma atmospheric ellipses (54:1292) — soft white-grey wash that bleeds through the dark bg */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-[18%] -right-[14%] h-[1052px] w-[1052px] max-h-[80vw] max-w-[80vw] rounded-full opacity-90"
-        style={{
-          background:
-            "linear-gradient(247deg, rgba(12, 12, 12, 1) 0%, rgba(255, 255, 255, 0.22) 99%)",
-          filter: "blur(220px)",
-        }}
-      />
+      <div className="pointer-events-none absolute right-[-540px] top-1/2 h-[820px] w-[820px] -translate-y-1/2">
+        <div
+          className="h-full w-full rounded-full opacity-80"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 40%, transparent 70%)",
+            filter: "blur(18px)",
+          }}
+        />
+      </div>
       <div
         aria-hidden
         className="pointer-events-none absolute -bottom-[20%] -left-[18%] h-[580px] w-[580px] max-h-[60vw] max-w-[60vw] rounded-full opacity-80"

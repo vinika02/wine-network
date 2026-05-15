@@ -23,8 +23,8 @@ export function AdvantageSection() {
   ];
 
   return (
-    <section className="section-shell section-pattern pb-16 sm:pb-20 lg:pb-24">
-      <div className="mx-auto max-w-[1208px] px-6">
+    <section className="section-shell section-pattern relative overflow-hidden isolate pb-16 sm:pb-20 lg:pb-24">
+        <div className="mx-auto max-w-[1208px] px-6">
         {/* Heading + glow divider */}
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <Image

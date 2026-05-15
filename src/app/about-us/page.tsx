@@ -88,6 +88,16 @@ function AboutIntroHeading() {
 function WorldSection() {
   return (
     <section className="about-world-bg relative isolate overflow-hidden px-6 py-20 sm:px-10 lg:h-[671px] lg:px-[78px] lg:py-[80px]">
+      <div className="pointer-events-none absolute left-[-540px] top-2 h-[820px] w-[820px] -translate-y-1/2">
+        <div
+          className="h-full w-full rounded-full opacity-80"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 40%, transparent 70%)",
+            filter: "blur(18px)",
+          }}
+        />
+      </div>
       <div className="relative z-10 mx-auto grid max-w-[1286px] gap-12 lg:grid-cols-[560px_460px] lg:items-center lg:justify-between lg:gap-12">
         <div>
           <SplitHeading muted="From" strong="Across The World" />
@@ -140,6 +150,10 @@ function WorldSection() {
 function SentosaSection() {
   return (
    <section className="overflow-visible bg-[#151515] px-6 py-16 text-center sm:px-10 lg:px-20 lg:py-16">
+    <div className="pointer-events-none absolute top-1/2 right-[-400px]
+         z-0 h-[520px] w-[520px]
+         -translate-y-1/2 rounded-full
+         bg-white/20 blur-[220px]"></div>
     <div className="mx-auto flex max-w-[1282px] flex-col items-center gap-10 lg:gap-12">
       <SentosaHeading />
 
@@ -180,6 +194,10 @@ function SentosaHeading() {
 function TransformationSection() {
   return (
     <section className="bg-[#151515] px-6 py-16 sm:px-10 lg:px-20 lg:py-16">
+      <div className="pointer-events-none absolute top-1/2 left-[-400px]
+         z-0 h-[520px] w-[520px]
+         -translate-y-1/2 rounded-full
+         bg-white/20 blur-[220px]"></div>
       <div className="mx-auto max-w-[1282px]">
         <div className="grid gap-8 lg:h-[80px] lg:grid-cols-[613px_613px] lg:items-start lg:justify-between lg:gap-0">
           <TransformationHeading />
