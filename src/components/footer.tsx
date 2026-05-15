@@ -48,7 +48,7 @@ export function Footer() {
               href="mailto:keith@winenetwork.sg"
               className={footerTextClass}
             >
-              keith@winenetwork.sg
+              keith@axpara.com
             </a>
           </FooterColumn>
 
