@@ -43,7 +43,9 @@ export function ClosingCtaV2({ href = "#contact" }: ClosingCtaV2Props) {
           </div>
 
           <a
-            href={href}
+            href="https://wa.me/6582003305"
+            target="_blank"
+            rel="noopener noreferrer"
             className="motion-button group mt-5 inline-flex items-center gap-1 rounded-full px-4 py-1.5 font-display text-[10px] font-medium uppercase tracking-[-0.04em] text-white transition hover:brightness-110 sm:px-5 sm:text-[11px] lg:mt-6 lg:px-[18px] lg:py-[7px] lg:text-[10px]"
             style={{
               background:
@@ -52,6 +54,7 @@ export function ClosingCtaV2({ href = "#contact" }: ClosingCtaV2Props) {
             }}
           >
             <span className="text-[14px] font-light">Speak With Us</span>
+
             <Image
               src="/icon/closing-arrow.svg"
               alt=""

@@ -30,14 +30,16 @@ export function Footer() {
           </FooterColumn>
 
           <FooterColumn label="Contact Us">
-            <a
-              href="tel:+6582003305"
+           <a
+              href="https://wa.me/6582003305?text=Hi%20I%20would%20like%20to%20inquire"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-display text-[16px] leading-[1.55] tracking-tight text-white transition hover:text-white/70"
             >
               +6582003305
             </a>
             <a
-              href="mailto:keith@winenetwork.sg"
+              href="mailto:keith@axpara.com"
               className="font-display text-[16px] leading-[1.55] tracking-tight text-white transition hover:text-white/70"
             >
               keith@axpara.com

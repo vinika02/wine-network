@@ -81,7 +81,7 @@ export function EcosystemSection() {
   const [product, platform, promise] = ecosystemCards;
 
   return (
-    <section className="section-shell relative isolate overflow-hidden">
+    <section id="revolution" className="section-shell relative isolate overflow-hidden">
       {/* Figma atmospheric ellipses (54:1292) — soft white-grey wash that bleeds through the dark bg */}
       <div className="pointer-events-none absolute right-[-540px] top-1/2 h-[820px] w-[820px] -translate-y-1/2">
         <div

@@ -36,23 +36,26 @@ export function ClosingCta({ href = "#contact" }: ClosingCtaProps) {
           </div>
 
           <a
-            href={href}
-            className="motion-button group inline-flex items-center gap-1 rounded-full px-5 py-2.5 font-display text-[14px] font-medium uppercase tracking-[-0.04em] text-white transition hover:brightness-110"
-            style={{
-              background:
-                "linear-gradient(#7C7C7C, #7C7C7C) padding-box, linear-gradient(166deg, rgba(255,255,255,0.1) 0%, rgba(153,153,153,0) 100%) border-box",
-              border: "3px solid transparent",
-            }}
-          >
-            <span className="text-[14px] font-light">Speak With Us</span>
-            <Image
-              src="/icon/closing-arrow.svg"
-              alt=""
-              width={14}
-              height={14}
-              className="h-3.5 w-3.5 transition group-hover:translate-x-0.5"
-            />
-          </a>
+              href="https://wa.me/6582003305"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="motion-button group mt-5 inline-flex items-center gap-1 rounded-full px-4 py-1.5 font-display text-[10px] font-medium uppercase tracking-[-0.04em] text-white transition hover:brightness-110 sm:px-5 sm:text-[11px] lg:mt-6 lg:px-[18px] lg:py-[7px] lg:text-[10px]"
+              style={{
+                background:
+                  "linear-gradient(#7C7C7C, #7C7C7C) padding-box, linear-gradient(166deg, rgba(255,255,255,0.1) 0%, rgba(153,153,153,0) 100%) border-box",
+                border: "2px solid transparent",
+              }}
+            >
+              <span className="text-[14px] font-light">Speak With Us</span>
+
+              <Image
+                src="/icon/closing-arrow.svg"
+                alt=""
+                width={12}
+                height={12}
+                className="h-3 w-3 transition group-hover:translate-x-0.5"
+              />
+            </a>
         </div>
       </div>
     </section>
