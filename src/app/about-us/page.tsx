@@ -167,7 +167,7 @@ function SentosaSection() {
         unoptimized
       />
 
-      <div className="mx-auto flex max-w-[928px] flex-col gap-7 font-display text-[22px] leading-[1.45] tracking-[-0.04em] text-white/60">
+      <div className="mx-auto font-light flex max-w-[928px] flex-col gap-7 font-display text-[18px] sm:text-[22px] leading-[1.45] tracking-[-0.04em] text-white/60">
         <p>
           In 2022, we took our expertise to the shores of Sentosa with the launch of Suburbia, a
           full-scale, wine-themed culinary experience. Suburbia was a masterclass in atmospheric
