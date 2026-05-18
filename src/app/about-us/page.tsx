@@ -171,9 +171,7 @@ function SentosaSection() {
         <p>
           In 2022, we took our expertise to the shores of Sentosa with the launch of Suburbia, a
           full-scale, wine-themed culinary experience. Suburbia was a masterclass in atmospheric
-          dining, serving as a vibrant hub and event space.
-        </p>
-        <p>The closure of Suburbia wasn&apos;t an end, but a catalyst for evolution.</p>
+          dining, serving as a vibrant hub and event space. The closure of Suburbia wasn&apos;t an end, but a catalyst for evolution.</p>
       </div>
     </div>
   </section>
